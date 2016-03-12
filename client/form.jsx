@@ -1,15 +1,45 @@
 import React from 'react';
+import {SendButton} from './send_button.jsx'
 
-export const Form = () => (
-  <form action="#" role="form">
-    <label htmlFor="name">Name</label>
-    <input type="text" name="name" placeholder="Enter your name..." />
-    <label htmlFor="email">Email</label>
-    <input type="email" name="email" placeholder="user@example.com" />
-    <label htmlFor="password">Password</label>
-    <input type="password" name="password" placeholder="8 characters or more..." />
-    <label htmlFor="bio">Bio</label>
-    <textarea name="bio" rows="3" placeholder="Tell us about yourself..."></textarea>
-    <input type="submit" value="Create Account" className="btn--blue" />
-  </form>
-);
+export class Form extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      emailTo: '',
+      emailFrom: '',
+      description: '',
+    };
+    //https://medium.com/@goatslacker/react-0-13-x-and-autobinding-b4906189425d#.yhbuhu80i
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleNameChange(event) {
+    this.setState({name: event.target.value});
+  }
+  handleSubmit(event) {
+    console.log(this.state, event);
+    event.preventDefault();
+  }
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit} role="form">
+        <label htmlFor="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          value={this.state.name}
+          onChange={this.handleNameChange}
+          placeholder="Enter your name..."
+        />
+        <label htmlFor="emailTo">To Email</label>
+        <input type="email" name="emailTo" placeholder="accounts@mybusiness.com" />
+        <label htmlFor="emailFrom">From Email</label>
+        <input type="email" name="emailFrom" placeholder="myname@mybusiness.com" />
+        <label htmlFor="description">Description</label>
+        <textarea name="description" rows="3" placeholder="Coffee with Joe, meeting expense..."></textarea>
+        <SendButton/>
+      </form>
+    )
+  }
+}
