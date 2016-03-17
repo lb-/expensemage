@@ -1,3 +1,4 @@
+import Varo from './services';
 import React from 'react';
 import {SendButton} from './send_button.jsx'
 
@@ -18,8 +19,13 @@ export class Form extends React.Component {
     this.setState({name: event.target.value});
   }
   handleSubmit(event) {
-    console.log(this.state, event);
     event.preventDefault();
+    let message = {role: 'submit'};
+    message.data = this.state;
+    // console.log(this.state, event);
+    Varo.act(message, function (err, reply) {
+      console.log(reply)
+    });
   }
   render() {
     return (
