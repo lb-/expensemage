@@ -3,10 +3,16 @@ import Varo from './services';
 import Sum from './services/sum';
 import Submit from './services/submit';
 
+//react
 import React from 'react';
 import {mount} from 'react-mounter';
+
+//react templates
 import {Layout} from './layout.jsx';
 import {Form} from './form.jsx';
+
+//forms
+
 
 //adds the plugins to Varo for use by the components further down
 Varo.plugin(Sum);
