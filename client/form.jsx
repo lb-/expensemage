@@ -1,54 +1,49 @@
 import Varo from './services';
-import React from 'react';
+// import React from 'react';
 // import {SendButton} from './send_button.jsx'
 
+////////////////
 //forms testing
-import {Fieldset, Field, createValue} from 'react-forms'
+
+import React, { Component } from "react";
+import { render } from "react-dom";
+import Form from "react-jsonschema-form";
 
 const schema = {
-  type: 'object',
+  title: "Todo Tasks",
+  type: "object",
+  required: ["title"],
   properties: {
-    firstName: {type: 'string'},
-    lastName: {type: 'string'},
-    "age": {
-      "description": "Age in years",
-      "type": "integer",
-      "minimum": 0
-    }
+    title: {type: "string", title: "Title", default: "A new task"},
+    done: {type: "boolean", title: "Done?", default: false}
   }
 };
 
-export class Form extends React.Component {
+const formData = {
+  title: "First task",
+  done: true
+};
 
+const log = (type) => console.log.bind(console, type);
+
+export class MyForm extends React.Component {
   constructor(props) {
     super(props);
-    this.onChange = this.onChange.bind(this);
-    // let formValue = createValue({value: props.value, onChange: this.onChange});
-    let formValue = createValue({
-      schema,
-      initialValue: props.value,
-      onChange: this.onChange
-    });
-    this.state = {formValue};
   }
-
-  onChange(formValue) {
-    console.log(this);
-    this.setState({formValue});
+render () {
+  return (
+    <Form schema={schema}
+      formData={formData}
+      onChange={log("changed")}
+      onSubmit={log("submitted")}
+      onError={log("errors")} />
+    );
   }
-
-  render() {
-    return (
-      <Fieldset formValue={this.state.formValue}>
-        <Field select="firstName" label="First name" />
-        <Field select="lastName" label="Last name" />
-        <Field select="age" label="Age" />
-      </Fieldset>
-    )
-  }
-
 };
 
+
+
+////////////////
 //original form below
 
 // export class Form extends React.Component {

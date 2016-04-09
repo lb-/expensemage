@@ -9,7 +9,7 @@ import {mount} from 'react-mounter';
 
 //react templates
 import {Layout} from './layout.jsx';
-import {Form} from './form.jsx';
+import {MyForm} from './form.jsx';
 
 //forms
 
@@ -25,7 +25,7 @@ Varo.plugin(Submit);
 FlowRouter.route('/', {
   action() {
     mount(Layout, {
-      content: (<Form/>)
+      content: (<MyForm/>)
     });
   }
 });
