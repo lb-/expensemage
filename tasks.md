@@ -2,6 +2,10 @@
 
 ## To Do
 
+* Host code online for backing up
+
+* Investigate pure functions for react
+  * https://github.com/ericelliott/react-pure-component-starter
 * use a forms library:
   * look through: https://github.com/enaqx/awesome-react#forms
   * Requirements (in order)
@@ -10,16 +14,16 @@
     * uses JSON Schema  or at least some semi-standard schema
     * Flexible with state (not sure if will use redux in future)
     * Flexible to add an upload component
+    * Nice to have: validation on the fly
   * Ideas
     * Might be able to host the json schema externally, user can edit fields that way :)
   * Might Try
-    * https://github.com/christianalfoni/formsy-react
-    * http://gcanti.github.io/tcomb-form/
+    * https://github.com/mozilla-services/react-jsonschema-form
+    * --https://github.com/christianalfoni/formsy-react-- // not good
+    * http://gcanti.github.io/tcomb-form/ with https://github.com/gcanti/tcomb-json-schema
   * Have Tried
     * https://github.com/prometheusresearch/react-forms // documentation is a bit odd, basic validation (is integer), doesnt convert from text to string in field
     * https://github.com/erikras/redux-form // major issues with getting this working, seems to be not ready for es6, but used some ES7 functions that caused issues
-
-* Host code online for safety
 
 * get some basic ui response
   * indicator that form is submitting
