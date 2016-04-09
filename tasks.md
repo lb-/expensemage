@@ -2,6 +2,12 @@
 
 ## To Do
 
+* Post the version one to a static site location
+  * Need to build it to a output repo/folder
+  * https://pages.github.com/
+  * http://aws.amazon.com/s3/
+  * https://cloud.google.com/storage/docs/website-configuration
+
 * get some basic ui response
   * indicator that form is submitting
   * indicator that form has submitted
