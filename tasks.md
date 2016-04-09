@@ -2,18 +2,19 @@
 
 ## To Do
 
-* Investigate pure functions for react
-  * https://github.com/ericelliott/react-pure-component-starter
-
 * get some basic ui response
   * indicator that form is submitting
   * indicator that form has submitted
   * clear the form when submitted
 
-* Get an email sending working
+* Get an email sending working using either AWS SMS or Google via Mailgun
+  * https://www.metachris.com/2016/03/free-transactional-email-services-the-best-alternatives-to-mandrill/ 
 
 * Get a file upload working
   * Potentially helpful: https://github.com/okonet/react-dropzone
+
+* Investigate pure functions for react
+  * https://github.com/ericelliott/react-pure-component-starter
 
 ## Done
 
