@@ -43,7 +43,7 @@ const schema = {
 
 const uiSchema = {
   description: {
-    "ui:widget": "textarea"
+    'ui:widget': 'textarea'
   }
 };
 
@@ -58,8 +58,11 @@ export class ExpenseForm extends React.Component {
       <Form
         schema={schema}
         uiSchema={uiSchema}
-        onSubmit={handleSubmit}
-      />
+        onSubmit={handleSubmit}>
+        <p>
+          <input type="submit" className="btn--blue" value="Submit" />
+        </p>
+      </Form>
     );
   }
 

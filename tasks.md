@@ -8,7 +8,7 @@
   * clear the form when submitted
 
 * Get an email sending working using either AWS SMS or Google via Mailgun
-  * https://www.metachris.com/2016/03/free-transactional-email-services-the-best-alternatives-to-mandrill/ 
+  * https://www.metachris.com/2016/03/free-transactional-email-services-the-best-alternatives-to-mandrill/
 
 * Get a file upload working
   * Potentially helpful: https://github.com/okonet/react-dropzone
@@ -17,6 +17,9 @@
   * https://github.com/ericelliott/react-pure-component-starter
 
 ## Done
+
+* Pretty up UI
+  * make submit button big & blue
 
 * use a forms library:
   * WORKS https://github.com/mozilla-services/react-jsonschema-form
