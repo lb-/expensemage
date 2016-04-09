@@ -2,10 +2,10 @@
 
 ## To Do
 
-* Host code online for backing up
-
 * Investigate pure functions for react
   * https://github.com/ericelliott/react-pure-component-starter
+
+
 * use a forms library:
   * look through: https://github.com/enaqx/awesome-react#forms
   * Requirements (in order)
@@ -33,8 +33,11 @@
 * Get an email sending working
 
 * Get a file upload working
+  * Potentially helpful: https://github.com/okonet/react-dropzone
 
 ## Done
+
+* Host code online for backing up https://github.com/lb-/expensemage
 
 * get a basic set up of https://github.com/senecajs/varo working
   * good example: https://github.com/senecajs/react-example
